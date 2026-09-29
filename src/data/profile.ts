@@ -9,7 +9,7 @@ export const profile = {
   email: "iamayushyadav1107@gmail.com",
   resume: "/Ayush_Yadav_Resume.pdf",
   resumeFile: "Ayush_Yadav_Resume.pdf", // filename the browser saves the download as
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayushyadav.vercel.app",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayush-yadav11.vercel.app",
   status: "Open to full-stack SDE roles · Class of 2027",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ayush-yadav-3a79b2293/" },

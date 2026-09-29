@@ -18,7 +18,7 @@ The personal site of a full-stack software engineer: typed React interfaces, sec
 </p>
 
 <p>
-  <!-- Add once deployed: <a href="https://YOUR-DOMAIN"><b>Live site</b></a> · -->
+  <a href="https://ayush-yadav11.vercel.app/"><b>Live site</b></a> ·
   <a href="public/Ayush_Yadav_Resume.pdf"><b>Résumé</b></a> ·
   <a href="https://www.linkedin.com/in/ayush-yadav-3a79b2293/"><b>LinkedIn</b></a> ·
   <a href="https://github.com/ayushYadav1107"><b>GitHub</b></a> ·
