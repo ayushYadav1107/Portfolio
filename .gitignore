@@ -1,6 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ── dependencies ─────────────────────────────
 /node_modules
 /.pnp
 .pnp.*
@@ -10,34 +10,46 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# ── next.js / build output ───────────────────
 /.next/
 /out/
-
-# production
 /build
+/dist
+next-env.d.ts
+*.tsbuildinfo
+.turbo
 
-# misc
-.DS_Store
-*.pem
+# ── testing & tooling caches ─────────────────
+/coverage
+.eslintcache
+.cache
 
-# debug
+# ── env files (keep the template) ────────────
+.env*
+!.env.example
+
+# ── deployment ───────────────────────────────
+.vercel
+
+# ── logs ─────────────────────────────────────
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# ── OS files ─────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pem
 
-# vercel
-.vercel
+# ── editors ──────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-!.env.example
+# ── local scratch & assistant output ─────────
+Claude outputs/
