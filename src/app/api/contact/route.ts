@@ -45,7 +45,7 @@ export async function POST(req: Request) {
   if (company) return Response.json({ ok: true }); // silently drop bots
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL ?? profile.email;
+  const to = process.env.CONTACT_TO_EMAIL || profile.email;
 
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: process.env.CONTACT_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>",
+    from: process.env.CONTACT_FROM_EMAIL || "Portfolio <onboarding@resend.dev>",
     to,
     replyTo: email,
     subject: `Portfolio message from ${name}`,
@@ -67,7 +67,9 @@ export async function POST(req: Request) {
 
   if (error) {
     console.error("[contact] Resend error", error);
-    return Response.json({ error: "the mail provider didn't accept the message." }, { status: 502 });
+    // In development, show Resend's own reason (bad key, unverified recipient, …) right in the form.
+    const detail = process.env.NODE_ENV !== "production" && error.message ? ` Resend says: ${error.message}` : "";
+    return Response.json({ error: `the mail provider didn't accept the message.${detail}` }, { status: 502 });
   }
   return Response.json({ ok: true });
 }

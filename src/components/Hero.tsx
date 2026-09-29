@@ -59,7 +59,7 @@ export function Hero() {
                 </a>
               </Magnetic>
               <Magnetic>
-                <a href={`mailto:${profile.email}`} className="inline-flex h-13 items-center rounded-full border border-white/25 px-6 font-medium transition-colors hover:border-bone hover:bg-white/5">
+                <a href="#contact" className="inline-flex h-13 items-center rounded-full border border-white/25 px-6 font-medium transition-colors hover:border-bone hover:bg-white/5">
                   Get in touch
                 </a>
               </Magnetic>
