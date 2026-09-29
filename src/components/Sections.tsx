@@ -36,7 +36,7 @@ export function Experience() {
           <div className="flex flex-col gap-8 lg:sticky lg:top-28 lg:col-span-6 lg:self-start">
             <Reveal className="flex flex-col gap-3">
               <span className="tag flex items-center gap-2 text-lime">
-                <span className="size-2 animate-pulse rounded-full bg-lime" /> {experience.period.toLowerCase()}
+                <span className="size-2 rounded-full bg-lime" /> {experience.period.toLowerCase()}
               </span>
               <span className="display text-4xl md:text-5xl">{experience.role}</span>
               <span className="text-lg text-mute">

@@ -63,6 +63,13 @@ export function Hero() {
                   Get in touch
                 </a>
               </Magnetic>
+              <a
+                href={profile.resume}
+                download={profile.resumeFile}
+                className="tag inline-flex h-13 items-center gap-2 px-2 text-bone underline decoration-white/30 underline-offset-[6px] transition-colors hover:text-lime hover:decoration-lime"
+              >
+                résumé.pdf <span aria-hidden="true">↓</span>
+              </a>
               <span className="tag ml-1 flex items-center gap-2 text-mute">
                 <span className="relative flex size-2">
                   <span className="absolute inline-flex size-full animate-ping-slow rounded-full bg-lime opacity-60" />

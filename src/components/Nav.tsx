@@ -76,11 +76,10 @@ export function Nav() {
             <Clock />
             <a
               href={profile.resume}
-              target="_blank"
-              rel="noopener"
+              download={profile.resumeFile}
               className="tag hidden h-10 items-center gap-2 rounded-full bg-lime px-4 font-medium text-ink transition-transform hover:scale-[1.04] md:inline-flex"
             >
-              résumé.pdf ↗
+              résumé.pdf ↓
             </a>
             <button
               type="button"
@@ -124,8 +123,8 @@ export function Nav() {
               ))}
             </ul>
             <div className="flex flex-col gap-4">
-              <a href={profile.resume} target="_blank" rel="noopener" className="tag text-lime">
-                résumé.pdf ↗
+              <a href={profile.resume} download={profile.resumeFile} className="tag text-lime">
+                download résumé.pdf ↓
               </a>
               <a href={`mailto:${profile.email}`} className="text-lg font-medium underline underline-offset-4">
                 {profile.email}

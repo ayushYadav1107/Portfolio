@@ -98,8 +98,8 @@ export function Contact() {
                 </Magnetic>
               ))}
               <Magnetic>
-                <a href={profile.resume} target="_blank" rel="noopener" className="inline-flex h-12 items-center rounded-full bg-bone px-5 font-semibold text-ink transition-transform hover:scale-[1.04]">
-                  résumé.pdf ↗
+                <a href={profile.resume} download={profile.resumeFile} className="inline-flex h-12 items-center rounded-full bg-bone px-5 font-semibold text-ink transition-transform hover:scale-[1.04]">
+                  résumé.pdf ↓
                 </a>
               </Magnetic>
             </Reveal>

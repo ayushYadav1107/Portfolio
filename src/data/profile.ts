@@ -8,6 +8,7 @@ export const profile = {
   location: "Bhopal, India",
   email: "iamayushyadav1107@gmail.com",
   resume: "/Ayush_Yadav_Resume.pdf",
+  resumeFile: "Ayush_Yadav_Resume.pdf", // filename the browser saves the download as
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayushyadav.vercel.app",
   status: "Open to full-stack SDE roles · Class of 2027",
   socials: [
@@ -28,7 +29,7 @@ export const layers = [
 export const stats = [
   { value: 3, suffix: "", label: "products shipped with live demos" },
   { value: 34, suffix: "", label: "REST endpoints across 7 roles" },
-  { value: 135, suffix: "", label: "automated tests written" },
+  { value: 145, suffix: "", label: "automated tests written" },
   { value: 8.67, suffix: "", label: "CGPA · B.Tech CSE (AI & ML)", decimals: 2 },
 ];
 
@@ -106,7 +107,7 @@ export const projects: Project[] = [
       ["criteria", "ATS · tone · content · structure · skills (weighted)"],
       ["backend", "none — no API key, uploads never touch a server"],
       ["inference", "dual AI path validated by one shared schema"],
-      ["tests", "39 automated (Vitest)"],
+      ["tests", "29 automated (Vitest)"],
     ],
     stack: ["React Router", "React 19", "TypeScript", "Tailwind v4", "Puter", "Vitest"],
     live: "https://resu-metrics-three.vercel.app/",
@@ -120,7 +121,7 @@ export const experience = {
   role: "Software Engineer Intern",
   company: "MP Online Limited",
   place: "Bhopal, India",
-  period: "Jul 2026 — Present",
+  period: "Jul 2026 — Sep 2026",
   project: "TaskForge",
   tagline: "Role-based task & workforce management, built end to end.",
   repo: "https://github.com/ayushYadav1107/TaskForge",
@@ -136,7 +137,7 @@ export const experience = {
     { type: "fix", scope: "rbac", title: "Central permission registry", body: "Redesigned authorization around a single permission map enforced on every endpoint, eliminating a privilege-escalation flaw." },
     { type: "sec", scope: "auth", title: "Hardened login", body: "Scrypt hashing, a 15-minute lockout after 5 failed logins, CSRF tokens and a Content-Security-Policy." },
     { type: "perf", scope: "tasks", title: "N+1 queries → one aggregate", body: "Collapsed the task list to a single aggregate query and removed a full-table dashboard scan." },
-    { type: "ci", scope: "docker", title: "96 tests + two-stage Docker build", body: "Automated testing and delivery on GitHub Actions CI." },
+    { type: "ci", scope: "docker", title: "116 tests + two-stage Docker build", body: "Automated testing and delivery on GitHub Actions CI." },
   ],
 };
 

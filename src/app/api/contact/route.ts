@@ -44,8 +44,8 @@ export async function POST(req: Request) {
   const { name, email, message, company } = parsed.data;
   if (company) return Response.json({ ok: true }); // silently drop bots
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || profile.email;
+  const apiKey = process.env.RESEND_API_KEY?.trim(); // .trim() guards against stray spaces / Windows line endings in .env
+  const to = process.env.CONTACT_TO_EMAIL?.trim() || profile.email;
 
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: process.env.CONTACT_FROM_EMAIL || "Portfolio <onboarding@resend.dev>",
+    from: process.env.CONTACT_FROM_EMAIL?.trim() || "Portfolio <onboarding@resend.dev>",
     to,
     replyTo: email,
     subject: `Portfolio message from ${name}`,
@@ -66,9 +66,10 @@ export async function POST(req: Request) {
   });
 
   if (error) {
-    console.error("[contact] Resend error", error);
+    // Shows up in your terminal locally, and under Project → Logs on Vercel.
+    console.error("[contact] Resend rejected the email:", JSON.stringify(error), "| to:", to);
     // In development, show Resend's own reason (bad key, unverified recipient, …) right in the form.
-    const detail = process.env.NODE_ENV !== "production" && error.message ? ` Resend says: ${error.message}` : "";
+    const detail = process.env.NODE_ENV !== "production" ? ` Resend says: ${error.message || error.name || "unknown error"}` : "";
     return Response.json({ error: `the mail provider didn't accept the message.${detail}` }, { status: 502 });
   }
   return Response.json({ ok: true });
