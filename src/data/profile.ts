@@ -30,7 +30,7 @@ export const stats = [
   { value: 3, suffix: "", label: "products shipped with live demos" },
   { value: 34, suffix: "", label: "REST endpoints across 7 roles" },
   { value: 145, suffix: "", label: "automated tests written" },
-  { value: 8.67, suffix: "", label: "CGPA · B.Tech CSE (AI & ML)", decimals: 2 },
+  { value: 8.73, suffix: "", label: "CGPA · B.Tech CSE (AI & ML)", decimals: 2 },
 ];
 
 export type Shot = { src: string; alt: string; w: number; h: number };
