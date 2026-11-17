@@ -179,6 +179,6 @@ export const awards: { title: string; detail: string; tag: string; href?: string
 ];
 
 export const education = [
-  { school: "VIT Bhopal University", degree: "B.Tech, Computer Science & Engineering (AI & ML)", period: "2023 — 2027", score: "CGPA 8.67 / 10" },
+  { school: "VIT Bhopal University", degree: "B.Tech, Computer Science & Engineering (AI & ML)", period: "2023 — 2027", score: "CGPA 8.73 / 10" },
   { school: "Kendriya Vidyalaya, Hyderabad", degree: "Class XII & Class X", period: "2021 — 2023", score: "XII 85% · X 97.3%" },
 ];
