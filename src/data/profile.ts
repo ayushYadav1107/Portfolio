@@ -7,8 +7,7 @@ export const profile = {
   role: "Full-Stack Software Engineer",
   location: "Bhopal, India",
   email: "iamayushyadav1107@gmail.com",
-  resume: "/Ayush_Yadav_Resume.pdf",
-  resumeFile: "Ayush_Yadav_Resume.pdf", // filename the browser saves the download as
+  resume: "https://drive.google.com/file/d/1Oce1c50OtZgPLaUc5C2eKuA66tDcGlhI/view?usp=sharing",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayush-yadav11.vercel.app",
   status: "Open to full-stack SDE roles · Class of 2027",
   socials: [
